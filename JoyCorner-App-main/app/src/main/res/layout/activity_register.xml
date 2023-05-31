@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hk.edu.cuhk.ie.iems5722.group25.joycorner.activity.LoginActivity"
+    android:id="@+id/layout">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/l_logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@mipmap/logo"
+        app:qmui_border_color="@color/white"
+        app:qmui_corner_radius="100dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/l_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:id="@+id/l_username"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Username"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/e_username"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="right"
+            app:layout_constraintLeft_toRightOf="@+id/l_username"
+            app:layout_constraintTop_toTopOf="@+id/l_username"/>
+
+        <TextView
+            android:id="@+id/l_nickname"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Nickname"
+            app:layout_constraintTop_toBottomOf="@+id/l_username"
+            app:layout_constraintLeft_toLeftOf="@+id/l_username" />
+
+        <EditText
+            android:id="@+id/e_nickname"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="right"
+            app:layout_constraintLeft_toRightOf="@+id/l_nickname"
+            app:layout_constraintTop_toTopOf="@+id/l_nickname"/>
+
+        <TextView
+            android:id="@+id/l_password"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Password"
+            app:layout_constraintTop_toBottomOf="@+id/l_nickname"
+            app:layout_constraintLeft_toLeftOf="@+id/l_nickname" />
+
+        <EditText
+            android:id="@+id/e_password"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="right"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toRightOf="@+id/l_password"
+            app:layout_constraintTop_toTopOf="@+id/l_password"/>
+
+
+        <TextView
+            android:id="@+id/l_confirm_password"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Confirm Password"
+            app:layout_constraintTop_toBottomOf="@+id/l_password"
+            app:layout_constraintLeft_toLeftOf="@+id/l_password" />
+
+        <EditText
+            android:id="@+id/e_confirm_password"
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:gravity="right"
+            android:inputType="textPassword"
+            app:layout_constraintLeft_toRightOf="@+id/l_confirm_password"
+            app:layout_constraintTop_toTopOf="@+id/l_confirm_password"/>
+
+        <TextView
+            android:id="@+id/l_location"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Location"
+            app:layout_constraintTop_toBottomOf="@+id/l_confirm_password"
+            app:layout_constraintLeft_toLeftOf="@+id/l_confirm_password" />
+
+        <EditText
+            android:id="@+id/e_location"
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:gravity="right"
+            app:layout_constraintLeft_toRightOf="@+id/l_location"
+            app:layout_constraintTop_toTopOf="@+id/l_location"/>
+
+        <TextView
+            android:id="@+id/l_birth"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Birth"
+            app:layout_constraintTop_toBottomOf="@+id/l_location"
+            app:layout_constraintLeft_toLeftOf="@+id/l_location" />
+
+        <EditText
+            android:id="@+id/e_birth"
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:gravity="right"
+            android:focusable="false"
+            app:layout_constraintLeft_toRightOf="@+id/l_birth"
+            app:layout_constraintTop_toTopOf="@+id/l_birth"/>
+
+        <TextView
+            android:id="@+id/l_sex"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Sex"
+            app:layout_constraintTop_toBottomOf="@+id/l_birth"
+            app:layout_constraintLeft_toLeftOf="@+id/l_birth" />
+
+        <EditText
+            android:id="@+id/e_sex_f"
+            android:layout_height="50dp"
+            android:layout_width="80dp"
+            android:gravity="center"
+            android:focusable="false"
+            app:layout_constraintLeft_toRightOf="@+id/l_sex"
+            app:layout_constraintTop_toTopOf="@+id/l_sex"/>
+
+        <Switch
+            android:id="@+id/s_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="male"
+            android:textOff="female"
+            app:layout_constraintLeft_toRightOf="@+id/e_sex_f"
+            app:layout_constraintBottom_toBottomOf="@+id/l_sex"
+            app:layout_constraintTop_toTopOf="@+id/l_sex"
+            />
+
+        <EditText
+            android:id="@+id/e_sex_m"
+            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:gravity="center"
+            android:focusable="false"
+            app:layout_constraintLeft_toRightOf="@+id/s_sex"
+            app:layout_constraintTop_toTopOf="@+id/l_sex"/>
+
+        <TextView
+            android:id="@+id/l_signature"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Signature"
+            app:layout_constraintTop_toBottomOf="@+id/l_sex"
+            app:layout_constraintLeft_toLeftOf="@+id/l_sex" />
+
+        <EditText
+            android:id="@+id/e_signature"
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:gravity="right"
+            app:layout_constraintLeft_toRightOf="@+id/l_signature"
+            app:layout_constraintTop_toTopOf="@+id/l_signature"/>
+
+        <Button
+            android:id="@+id/b_register"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/l_signature"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@color/main_color"
+            android:textColor="@color/white"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:textSize="16sp"
+            android:text="Register"
+            android:layout_marginTop="50dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
