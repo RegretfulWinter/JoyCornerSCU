@@ -3,15 +3,10 @@ Final Group Project for SCU's COEN 285 Software Engineering.
 
 
 #### Introduction
-- This repository is used to store the source code of my final project assignments, including the Android client and the python server (JoyCorner-Server).
-
-
-
 #### JoyCorner-App Features Overview [x] and Future Enhancements [ ]
 
 - Sign In
   - [x] Store login status session
-  - [x] Anti-Bypass
   
 - Sign up
   - [x] Input checking
