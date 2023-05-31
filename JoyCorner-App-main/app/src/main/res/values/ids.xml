@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="topbar_right" type="id"/>
+    <item name="activity_name" type="id"/>
+    <item name="activity_type" type="id"/>
+    <item name="activity_content" type="id"/>
+    <item name="activity_start_time" type="id"/>
+    <item name="activity_end_time" type="id"/>
+    <item name="activity_location" type="id"/>
+    <item name="activity_number_of_participants" type="id"/>
+</resources>

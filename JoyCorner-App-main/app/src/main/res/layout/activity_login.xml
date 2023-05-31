@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hk.edu.cuhk.ie.iems5722.group25.joycorner.activity.LoginActivity"
+    android:id="@+id/layout">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/l_logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@mipmap/logo"
+        app:qmui_border_color="@color/white"
+        app:qmui_corner_radius="100dp"
+        />
+
+    <com.qmuiteam.qmui.widget.QMUILoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/l_logo"
+        app:layout_constraintBottom_toTopOf="@+id/login_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_layout"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/l_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <TextView
+            android:id="@+id/l_username"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Username"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <EditText
+            android:id="@+id/e_username"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="right"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/l_username"
+            app:layout_constraintTop_toTopOf="@+id/l_username"
+            app:layout_constraintBottom_toBottomOf="@+id/l_username"/>
+
+        <TextView
+            android:id="@+id/l_password"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="Password"
+            app:layout_constraintTop_toBottomOf="@+id/l_username"
+            app:layout_constraintLeft_toLeftOf="@+id/l_username" />
+
+        <EditText
+            android:id="@+id/e_password"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:gravity="right"
+            android:layout_marginStart="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/l_password"
+            app:layout_constraintTop_toTopOf="@+id/l_password"
+            app:layout_constraintBottom_toBottomOf="@+id/l_password"/>
+
+        <Button
+            android:id="@+id/b_login"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/l_password"
+            app:layout_constraintLeft_toLeftOf="@+id/l_password"
+            android:layout_marginTop="100dp"
+            android:background="@color/main_color"
+            android:textColor="@color/white"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:textSize="16sp"
+            android:text="Login"/>
+
+        <Button
+            android:id="@+id/b_register"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/l_password"
+            app:layout_constraintRight_toRightOf="@+id/e_password"
+            android:layout_marginTop="100dp"
+            android:background="@color/main_color"
+            android:textColor="@color/white"
+            android:fontFamily="@string/font_fontFamily_medium"
+            android:textSize="16sp"
+            android:text="Register"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

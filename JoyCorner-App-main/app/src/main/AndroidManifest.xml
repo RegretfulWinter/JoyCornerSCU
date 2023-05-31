@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hk.edu.cuhk.ie.iems5722.group25.joycorner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/jc_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/jc_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JoyCorner"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ChatActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.BrowserImageActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.VideoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.FriendInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.StrangerInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.FriendRequestActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.PostActivityInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.DetailActivityInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.JoinedActivityInfoActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ChatterbotActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:launchMode="singleTask" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="hk.edu.cuhk.ie.iems5722.group25.joycorner.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".service.JoyCornerFCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/jc_launcher_round" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+    </application>
+
+</manifest>

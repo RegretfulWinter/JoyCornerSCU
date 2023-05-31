@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "293492707971",
+    "project_id": "joycorner-iems",
+    "storage_bucket": "joycorner-iems.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293492707971:android:8c697b9132ad7ef65081b6",
+        "android_client_info": {
+          "package_name": "hk.edu.cuhk.ie.iems5722.group25.joycorner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293492707971-sqhltrvoq7nthtnr878lg2ggqa7srvmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7aBmioUUQu16J0Pb0l-Pnzg1BS_rJRWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293492707971-sqhltrvoq7nthtnr878lg2ggqa7srvmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
